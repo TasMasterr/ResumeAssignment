@@ -7,13 +7,6 @@
 
 
 /* --------- Global ----------- */
-html{
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: in;
-}
-
 body {
     background: #EFF6E0;
     margin: 0;
@@ -21,7 +14,7 @@ body {
 h1 {
     font-size: 36pt;
     font-family: Verdana;
-    text-shadow: 6px 6px#002d3f;
+    text-shadow: 6px 6px #002d3f;
 }
 h2 {
     font-size: 28pt;
@@ -39,6 +32,44 @@ p {
     width: 900px;
     margin: 0 auto;
     padding: 60px 0;
+}
+
+
+/* ------ Navigation Bar ------ */
+ul {
+    text-align: left;
+    list-style: none;
+    background:#01161E;
+    margin: 0;
+}
+ul li {
+    font: bold 18px sans-serif;
+    display: inline-block;
+    position: relative;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+ul li:hover {
+    background: #002d3f;
+}
+ul li ul {
+    visibility: hidden;
+    padding: 0;
+    position: absolute;
+}
+ul li ul li:hover {
+    background: #002d3f;
+    visibility: visible;
+}
+ul li:hover ul {
+    display: block;
+    top: 69px;
+    left: 0px;
+}
+ul li:hover > ul,
+ul li ul:hover {
+    visibility: visible;
+    display: block;
 }
 
 
@@ -61,17 +92,21 @@ header {
 
 /* --------- Education -------- */
 .education {
-    background: #01161E;
+    background: #124559;
     color: #EFF6E0;
 }
 
 
 /* ---------- Contact --------- */
 footer {
-    background: #AEC3B0;
-    color: #124559;
+    background: #01161E;
+    color: #EFF6E0;
 }
-a:link{
+a{
     text-decoration: none;
+    color: #EFF6E0;
     font-family: Verdana;
+    display: block;
+    padding: 10px;
+    font-size: 16px;
 }
